@@ -1,6 +1,6 @@
 using UnityEngine;
-using UnityEngine.UI; // For Image
-using TMPro; // For TextMeshProUGUI
+using UnityEngine.UI;
+using TMPro;
 
 public class BuildingSelector : MonoBehaviour
 {
