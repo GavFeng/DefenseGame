@@ -15,4 +15,4 @@ MonoBehaviour:
   buildingName: Turret3
   buildingPrefab: {fileID: 2700268473392757438, guid: 7f638b107f00de445b1406c14bebee35, type: 3}
   previewPrefab: {fileID: 5985773638262644947, guid: 87d4a307cd4b748429f60a8d989227ac, type: 3}
-  energyCost: 100
+  energyCost: 300
