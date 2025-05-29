@@ -35,46 +35,39 @@ public class ZombieSpawner : MonoBehaviour
 
         if (zombieTimer >= zombieSpawnInterval && zombieCurrentCount < zombieMaxCount)
         {
-            if (Spawn(zombiePrefab))
-                zombieCurrentCount++;
+            Spawn(zombiePrefab);
+            zombieCurrentCount++;
 
             zombieTimer = 0f;
         }
 
         if (acidZombieTimer >= acidZombieSpawnInterval && acidCurrentCount < acidMaxCount)
         {
-            if (Spawn(acidZombiePrefab))
-                acidCurrentCount++;
+            Spawn(acidZombiePrefab);
+            acidCurrentCount++;
 
             acidZombieTimer = 0f;
         }
 
         if (armoredZombieTimer >= armoredZombieSpawnInterval && armoredCurrentCount < armoredMaxCount)
         {
-            if (Spawn(armoredZombiePrefab))
-                armoredCurrentCount++;
+            Spawn(armoredZombiePrefab);
+            armoredCurrentCount++;
 
             armoredZombieTimer = 0f;
         }
     }
 
-    bool Spawn(GameObject zombieType)
+    void Spawn(GameObject zombieType)
     {
-        if (gridManager == null || zombieType == null)
-            return false;
+        if (zombieType == null)
+            return;
 
         int row = Random.Range(0, gridManager.rows);
         int col = gridManager.columns - 1;
 
-        if (!gridManager.IsCellFilled(row, col))
-        {
-            Vector3 spawnPos = gridManager.gridOrigin + new Vector2(col * gridManager.cellSize, row * gridManager.cellSize);
-            Instantiate(zombieType, spawnPos, Quaternion.identity);
-            gridManager.OccupyCell(row, col, true);
-            return true;
-        }
-
-        return false; // Spawn failed due to blocked cell
+        Vector3 spawnPos = gridManager.gridOrigin + new Vector2(col * gridManager.cellSize, row * gridManager.cellSize);
+        Instantiate(zombieType, spawnPos, Quaternion.identity);
     }
 }
 

@@ -123,6 +123,19 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -359,7 +372,17 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Acid Vomiting Effect_0: 38660715196976891
+      Acid Vomiting Effect_1: 8778110494704709055
+      Acid Vomiting Effect_2: -1727762795534004221
+      Acid Vomiting Effect_3: 4798961009833528900
+      Acid Vomiting Effect_4: -1040197009564152882
+      Acid Vomiting Effect_5: -6024542049497401025
+      Acid Vomiting Effect_6: 5753149790280792382
+      Acid Vomiting Effect_7: 6041474325785943565
+      Acid Vomiting Effect_8: -1131938892449558448
+      Acid Vomiting Effect_9: 1957064776126165768
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

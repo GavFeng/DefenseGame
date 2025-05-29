@@ -13,7 +13,7 @@ public class BuildingSelector : MonoBehaviour
     private GridManager gridManager;
     private bool isDragging;
     private bool dragStartedThisFrame;
-    private int energyPoints = 200;
+    public int energyPoints = 200;
     private Camera mainCamera;
 
     void Start()
