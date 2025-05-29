@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: 6876147684187180136}
   - component: {fileID: 738144600604512914}
   - component: {fileID: 9164343648564175093}
-  - component: {fileID: 3137640151188504248}
   m_Layer: 0
   m_Name: Wall
   m_TagString: Building
@@ -177,7 +176,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: 1.966026}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -187,19 +186,5 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 9.36, y: 13.62}
+  m_Size: {x: 9.36, y: 9.687949}
   m_EdgeRadius: 0
---- !u!114 &3137640151188504248
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6368466386497238924}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2a8cc02b30d66c14d9462f694f10991c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  maxHealth: 200
-  healthBar: {fileID: 0}

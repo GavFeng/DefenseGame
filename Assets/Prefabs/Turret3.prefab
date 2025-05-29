@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: 5317300590725241270}
   - component: {fileID: 7011626195886650217}
   - component: {fileID: 3902892563444772498}
-  - component: {fileID: 1049420883975259022}
   m_Layer: 0
   m_Name: Turret3
   m_TagString: Building
@@ -192,17 +191,3 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 7.2610707, y: 8.01}
   m_EdgeRadius: 0
---- !u!114 &1049420883975259022
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2700268473392757438}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2a8cc02b30d66c14d9462f694f10991c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  maxHealth: 150
-  healthBar: {fileID: 0}

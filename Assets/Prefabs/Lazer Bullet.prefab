@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 8875665613736826808}
   - component: {fileID: 8384947826455447906}
   - component: {fileID: 7938517658863738538}
-  - component: {fileID: 5459600767560569527}
+  - component: {fileID: 6407275859058019407}
   m_Layer: 0
   m_Name: Lazer Bullet
   m_TagString: Bullet
@@ -148,7 +148,7 @@ CircleCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
@@ -191,7 +191,7 @@ CapsuleCollider2D:
   m_Offset: {x: -0.097863674, y: 0.02935946}
   m_Size: {x: 1.4075041, y: 1.505369}
   m_Direction: 0
---- !u!114 &5459600767560569527
+--- !u!114 &6407275859058019407
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -200,7 +200,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 3863949778718558173}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a596c81154786a14e8c98715ef82dd56, type: 3}
+  m_Script: {fileID: 11500000, guid: 778751465047e144d85ce1ab0dd7ff90, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
+  maxPierceCount: 3

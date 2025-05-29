@@ -12,8 +12,8 @@ GameObject:
   - component: {fileID: 3056249148171655408}
   - component: {fileID: 5554827850313218765}
   - component: {fileID: 2522757775158191452}
-  - component: {fileID: -5134446033469006949}
   - component: {fileID: -2748753606962610299}
+  - component: {fileID: -8185042549906806156}
   m_Layer: 0
   m_Name: Heavy Armor Zombie
   m_TagString: Zombie
@@ -31,7 +31,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 87.8, y: -5.6, z: 0}
-  m_LocalScale: {x: 9, y: 9, z: 1}
+  m_LocalScale: {x: 0.15, y: 0.15, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -125,7 +125,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 1.730423}
+  m_Offset: {x: 0, y: 0.9556922}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -135,7 +135,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 2, y: 5.6769714}
+  m_Size: {x: 2, y: 7.226433}
   m_EdgeRadius: 0
 --- !u!50 &2522757775158191452
 Rigidbody2D:
@@ -149,10 +149,10 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 10
   m_LinearDamping: 0
   m_AngularDamping: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -164,20 +164,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &-5134446033469006949
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1673287054129462760}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 23f0d4b41cfd1ee4c922e71b5d0b78c1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  maxHealth: 300
-  healthBar: {fileID: 0}
 --- !u!114 &-2748753606962610299
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -190,5 +176,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5039e039706aeb84aa1473db19e02881, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 2
+  speed: 0.5
   targetTag: Building
+  damage: 40
+  attackInterval: 0.75
+--- !u!114 &-8185042549906806156
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1673287054129462760}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fcd72afa8a6a3774d99f484f96f1ce3d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 300

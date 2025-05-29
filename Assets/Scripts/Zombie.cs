@@ -4,29 +4,51 @@ public class Zombie : MonoBehaviour
 {
     public float speed = 2f;
     public string targetTag = "Building";
-    
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
+    public int damage = 20;
+    public float attackInterval = 1f;
 
-    // Update is called once per frame
+    private Building targetBuilding;
+    private bool isAttacking = false;
+    private float attackTimer;
+
     void Update()
     {
-        transform.Translate(Vector2.left * speed * Time.deltaTime);
+        if (!isAttacking)
+        {
+            // Move left toward the target
+            transform.Translate(Vector2.left * speed * Time.deltaTime);
+        }
+        else
+        {
+            // Attack over time
+            attackTimer += Time.deltaTime;
+            if (attackTimer >= attackInterval)
+            {
+                attackTimer = 0f;
+
+                if (targetBuilding != null)
+                {
+                    targetBuilding.TakeDamage(damage);
+                }
+                else
+                {
+                    Destroy(gameObject); // Stop attacking if the building is already gone
+                }
+            }
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag(targetTag))
         {
-            BuildingHealth buildingHealth = collision.GetComponent<BuildingHealth>();
-            if (buildingHealth != null)
+            targetBuilding = collision.GetComponent<Building>();
+            if (targetBuilding != null)
             {
-                buildingHealth.TakeDamage(20);
+                isAttacking = true;
+                attackTimer = 0f;
             }
-            Destroy(gameObject);
-      }
+        }
     }
 }
+
