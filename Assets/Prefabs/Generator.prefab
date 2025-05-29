@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 5113713690171550668}
   - component: {fileID: 393611320178023693}
   - component: {fileID: 8951346067064828370}
+  - component: {fileID: 7190749241668845782}
   m_Layer: 0
   m_Name: Generator
   m_TagString: Building
@@ -143,3 +144,17 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: 0}
   m_Size: {x: 1, y: 1}
   m_Direction: 0
+--- !u!114 &7190749241668845782
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2137536548638846549}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a8cc02b30d66c14d9462f694f10991c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 50
+  healthBar: {fileID: 0}
