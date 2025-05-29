@@ -1266,12 +1266,11 @@ MonoBehaviour:
   zombiePrefab: {fileID: 980638058297752137, guid: 65f5c4984ad867f4a86db06bd5078695, type: 3}
   acidZombiePrefab: {fileID: 3479408882748552286, guid: 3a1947b8e1d207d41a36b4646b0c8418, type: 3}
   armoredZombiePrefab: {fileID: 1673287054129462760, guid: d868c83fc674006489921d47138dcc05, type: 3}
-  zombieSpawnInterval: 2
-  acidZombieSpawnInterval: 5
-  armoredZombieSpawnInterval: 8
-  zombieMaxCount: 10
-  acidMaxCount: 5
-  armoredMaxCount: 3
+  spawnInterval: 3
+  maxTotalZombies: 10
+  regularZombieWeight: 60
+  acidZombieWeight: 30
+  armoredZombieWeight: 10
 --- !u!1 &1259386611
 GameObject:
   m_ObjectHideFlags: 0
@@ -2318,7 +2317,7 @@ Transform:
   m_GameObject: {fileID: 1914752170}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.0465, y: -1.8158, z: 0}
+  m_LocalPosition: {x: 0.11, y: -2.22, z: 0}
   m_LocalScale: {x: 1.1976445, y: 0.75524837, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
