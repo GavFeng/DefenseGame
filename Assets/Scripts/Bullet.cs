@@ -18,16 +18,30 @@ public class Bullet : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("Zombie"))
+    if (collision.CompareTag("Zombie"))
+    {
+        Zombie zombie = collision.GetComponent<Zombie>();
+        if (zombie != null)
         {
-            Health health = collision.GetComponent<Health>();
-            if (health != null)
-            {
-                // Apply damage
-                health.TakeDamage(10);
-            }
+            zombie.TakeDamage(10); // Already does health update, bar, destroy
+        }
 
-            Destroy(gameObject);
+        Destroy(gameObject);
         }
     }
+
+    // private void OnTriggerEnter2D(Collider2D collision)
+    //{
+        //if (collision.CompareTag("Zombie"))
+        //{
+           // Health health = collision.GetComponent<Health>();
+           // if (health != null)
+          //  {
+                // Apply damage
+              //  health.TakeDamage(10);
+         //   }
+
+          //  Destroy(gameObject);
+     //   }
+    //}
 }

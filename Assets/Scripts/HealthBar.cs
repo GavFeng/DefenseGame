@@ -3,50 +3,25 @@ using UnityEngine.UI;
 
 public class HealthBar : MonoBehaviour
 {
-    public int maxHealth = 100;
-    private int currentHealth;
-    public Slider healthSlider; // Drag your Slider component here
-    
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        currentHealth = maxHealth;
+    public Image fillImage;
+    public Transform followTarget; // enemy or building
+    public Vector3 offset = new Vector3(0, 2f, 0);
 
-        if (healthSlider == null)
-        {
-            healthSlider = GetComponentInChildren<Slider>();
-        }
-
-        if (healthSlider != null)
-        {
-            healthSlider.maxValue = maxHealth;
-            healthSlider.value = currentHealth;
-        }
-    }
-
-    public void TakeDamage(int amount)
-    {
-        currentHealth -= amount;
-
-        if (healthSlider != null)
-        {
-            healthSlider.value = currentHealth;
-        }
-
-        if (currentHealth <= 0)
-        {
-            Destroy(gameObject);
-        }
-    }
-
-    public bool IsDead()
-{
-    return currentHealth <= 0;
-}
-
-    // Update is called once per frame
     void Update()
     {
-        
+        if (followTarget != null)
+        {
+            transform.position = followTarget.position + offset;
+            transform.forward = Camera.main.transform.forward; // Face camera
+        }
+    }
+
+    public void SetHealth(float current, float max)
+    {
+        if (fillImage != null)
+        {
+            fillImage.fillAmount = Mathf.Clamp01(current / max);
+            Debug.Log($"Health bar updated: {fillImage.fillAmount}");
+        }
     }
 }

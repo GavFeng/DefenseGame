@@ -7,9 +7,28 @@ public class Zombie : MonoBehaviour
     public int damage = 20;
     public float attackInterval = 1f;
 
+    public GameObject healthBarPrefab; // Assign this in the Inspector
+    private HealthBar healthBar;
+    public float maxHealth = 100f;
+    private float currentHealth;
+
     private Building targetBuilding;
     private bool isAttacking = false;
     private float attackTimer;
+
+    void Start()
+    {
+        currentHealth = maxHealth;
+
+        // Instantiate health bar if prefab assigned
+        if (healthBarPrefab != null)
+        {
+            GameObject hb = Instantiate(healthBarPrefab, transform.position + Vector3.up * 1.5f, Quaternion.identity);
+            healthBar = hb.GetComponent<HealthBar>();
+            healthBar.followTarget = transform;
+            healthBar.SetHealth(currentHealth, maxHealth);
+        }
+    }
 
     void Update()
     {
@@ -84,5 +103,25 @@ public class Zombie : MonoBehaviour
         }
     }
 
+    // Call this when the zombie gets damaged
+    public void TakeDamage(float damage)
+    {
+        currentHealth -= damage;
+        Debug.Log("Zombie took damage. Health: " + currentHealth);
+
+        if (healthBar != null)
+        {
+            healthBar.SetHealth(currentHealth, maxHealth);
+        }
+
+        if (currentHealth <= 0)
+        {
+            Destroy(gameObject);
+            if (healthBar != null)
+            {
+                Destroy(healthBar.gameObject);
+            }
+        }
+    }
 }
 

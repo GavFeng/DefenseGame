@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: 277000851942643566}
   - component: {fileID: 1732564765877466302}
   - component: {fileID: 2884560233058226685}
-  - component: {fileID: 8069138624491344744}
   m_Layer: 6
   m_Name: Acid Spitting Zombie
   m_TagString: Zombie
@@ -180,16 +179,5 @@ MonoBehaviour:
   targetTag: Building
   damage: 20
   attackInterval: 1.5
---- !u!114 &8069138624491344744
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3479408882748552286}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fcd72afa8a6a3774d99f484f96f1ce3d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  healthBarPrefab: {fileID: 7654486149802511677, guid: 5e4117f27b83e03428344c676d8faaa7, type: 3}
   maxHealth: 150
