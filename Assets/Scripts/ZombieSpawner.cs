@@ -92,7 +92,9 @@ public class ZombieSpawner : MonoBehaviour
     {
         if (totalZombieCount > 0)
         {
+            Debug.Log($"Total zombies: {totalZombieCount}");
             totalZombieCount--;
+            Debug.Log($"Total zombies: {totalZombieCount}");
         }
     }
 }

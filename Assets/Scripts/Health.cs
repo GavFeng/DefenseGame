@@ -24,8 +24,10 @@ public class Health : MonoBehaviour
         {
             if (spawner != null)
             {
-                spawner.OnZombieDestroyed();
+               spawner.OnZombieDestroyed();
+               Debug.Log($"Working");
             }
+           
             Destroy(gameObject);
         }
     }

@@ -15,9 +15,11 @@ public class Zombie : MonoBehaviour
     private Building targetBuilding;
     private bool isAttacking = false;
     private float attackTimer;
+    private ZombieSpawner spawner;
 
     void Start()
     {
+        spawner = FindFirstObjectByType<ZombieSpawner>();
         currentHealth = maxHealth;
 
         // Instantiate health bar if prefab assigned
@@ -117,6 +119,11 @@ public class Zombie : MonoBehaviour
         if (currentHealth <= 0)
         {
             Destroy(gameObject);
+            if (spawner != null)
+            {
+                spawner.OnZombieDestroyed();
+            }
+
             if (healthBar != null)
             {
                 Destroy(healthBar.gameObject);
