@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3edf014d8aecbdb4a8042a1cab9721ae, type: 3}
   m_Name: Turret2
   m_EditorClassIdentifier: 
-  buildingName: Turret2
+  buildingName: HandMade Turret
   buildingPrefab: {fileID: 5619707397586378293, guid: 33b8aaddb52e3e84da4355c18b3b1c3e, type: 3}
   previewPrefab: {fileID: 3845030866538456086, guid: c47df20cf98fb194a8b7910a5ffa9c09, type: 3}
   energyCost: 150

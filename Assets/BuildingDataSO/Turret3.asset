@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3edf014d8aecbdb4a8042a1cab9721ae, type: 3}
   m_Name: Turret3
   m_EditorClassIdentifier: 
-  buildingName: Turret3
+  buildingName: Galting Turret
   buildingPrefab: {fileID: 2700268473392757438, guid: 7f638b107f00de445b1406c14bebee35, type: 3}
   previewPrefab: {fileID: 5985773638262644947, guid: 87d4a307cd4b748429f60a8d989227ac, type: 3}
   energyCost: 300

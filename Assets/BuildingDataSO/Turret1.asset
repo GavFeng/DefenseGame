@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3edf014d8aecbdb4a8042a1cab9721ae, type: 3}
   m_Name: Turret1
   m_EditorClassIdentifier: 
-  buildingName: Turret1
+  buildingName: MetalScrap Turret
   buildingPrefab: {fileID: 1748266818705147411, guid: b92a311dda054184e898cc3bee84a253, type: 3}
   previewPrefab: {fileID: 2093961632947890572, guid: 45fbcbc7689f6724e831f0ef47bfc813, type: 3}
   energyCost: 100
