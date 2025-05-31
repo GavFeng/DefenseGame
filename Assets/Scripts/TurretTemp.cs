@@ -5,6 +5,7 @@ public class TurretTemp : Building
     public float fireRate = 1f;
     public GameObject bulletPrefab; 
     private float nextFireTime;
+    public float upOffset = 0.0f;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -18,7 +19,7 @@ public class TurretTemp : Building
     {
         if (Time.time >= nextFireTime)
         {
-            Instantiate(bulletPrefab, transform.position + Vector3.right * 0.5f, Quaternion.identity);
+            Instantiate(bulletPrefab, transform.position + Vector3.right * 0.5f  + Vector3.up * upOffset, Quaternion.identity);
             nextFireTime = Time.time + 1f / fireRate;
         }
     }
