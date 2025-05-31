@@ -23,10 +23,10 @@ public class PiercingBullet : MonoBehaviour
         // Only count hits on zombies
         if (collision.CompareTag("Zombie"))
         {
-            Health health = collision.GetComponent<Health>();
-            if (health != null)
+            Zombie zombie = collision.GetComponent<Zombie>();
+            if (zombie != null)
             {
-                health.TakeDamage(10);
+                zombie.TakeDamage(10);
             }
 
             currentPierceCount++;
@@ -37,4 +37,7 @@ public class PiercingBullet : MonoBehaviour
             }
         }
     }
+
+
+    
 }
